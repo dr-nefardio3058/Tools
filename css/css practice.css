@@ -1,0 +1,211 @@
+body { /*asi es la syntaxis: selector, llave, atributos, cierro llave en css*/
+    color: rgb(0, 0, 0);
+}
+
+#Titulo {
+    color: aqua;
+    font-family: "Montserrat", sans-serif; /*añadimos fuente custom de google fonts: monsterrat y sans sherif por si esta no carga*/
+}
+
+/* #Título (id) es lo mismo que poner h1 en este caso*/
+
+p.parrafo { /* todas los parrafos que contengan una clase "parrafo", asignales este color {en este caso los primeros dos}*/
+    color: rgb(12, 252, 160);
+    border: 9px #0F0 dotted;
+}
+
+p.especial {
+    font-size: 30px; /*en este caso si que se aplica el negro pero no los 24 pixeles del *, ya que ya esta definido aqui, en este selector*/
+}
+
+div p { /*TODAS, si todas LAS ETIQUETAS DE DIV QUE CONTENGAN P TENDRAN LOS SIG ATRIBUTOS*/
+    font-size: large;
+    color: black;
+    width: 6em;
+}
+
+div h2, div h3 { /*{lo mismo que arriba pero con h2 y h3(dos selectores)}TODAS, si todas LAS ETIQUETAS DE DIV QUE CONTENGAN H2 TENDRAN LOS SIG ATRIBUTOS*/
+    color: gold;
+    border: 0.2in rgb(190, 0, 255) solid;
+}
+
+* { /*selector universal, le da los sig atributos a absolutamente todo el codigo html*/
+    font-size: 24px; /*se aplica en todo ya que nunca lo definimos en otros selectores*/
+    /* color: rgb(0, 0, 0);  no va aplicar esta propiedad porque ya esta definida por otros selectores, se tendria que poner todo negro pero no lo hace*/
+}
+
+.color { /*EEE (GRIS SUAVE, NO BLANCO), MIENTRAS MAS F MAS CERCA AL BLANCO FF0 (AMARILLO), ALGUNOS COLORES: FFF (BLANCO), F00 (ROJO), 0F0 (LIMA), 00F (AZUL); valor hexagesimal, SIEMPRE AL PRINCIPIO # 6 digitos o 3, la ausencia de color es el negro 00(ROJO)00(VERDE)00(AZUL)/000 y la presencia es el blanco (f) LA MAYOR PRESENCIA DE ROJO, AZUL O VERDE LA CONSEGUIMOS DONDE VAYAN (REF. ATRAS) RODEADO/SEGUIDO POR 0 (EN CASO DE ROJO: FF{segunda f es como decimal}0000)*/
+    color: #0F0
+}
+
+.colorin { /* rgb =red,green, blue. 190, 0, 0 ES ROJO CLARITO Y ASI. MAS BAJO MAS CLARO. SE PUEDEN COMBINAR 2 O 3 COLORES. 255 MAX, usamos rgb aqui TIPOS: RGB, HEXADECIMAL Y CLASICO. RGB NOS VIENE CARGADO DEFAULT CON VERDE, AZUL Y ROJO, SI NO QUEREMOS 1 PONEMOS 0 A ESE Y SI QUEREMOS COMBINACION DE LOS OTROS PERO CON UN COLOR DOMINANTE PONEMOS COLOR DOMINANTE MAS ALTO Y EL OTRO MAS BAJO (CELESTE: DOMINANTE AZUL (255 AQUI), ROJO 0, VERDE 255)*/
+    color: rgb(190, 0, 255); /* termina con o sin ;, es lo mismo*/
+}
+
+.border { /* SIN , SE PUEDEN COMBINAR LOS ESTILOS DEL FINAL (PREVIEW: https://developer.mozilla.org/en-US/docs/Web/CSS/border-style) CTRL+SPACE PARA VER OPCIONES. borde de x pixeles, x color, x estilo(horizontal), {x estilo (vertical), x estilo (derecha), x estilo (izquierda)}; asi es el orden en border*/
+    border: 2pc red inset;
+}
+
+.bordder2 { /*es lo mismo que lo otro pero en mas lineas de codigo xd*/
+    border-style: solid; 
+    border-color: blue;
+    border-radius: 5pt; /* redondo */
+    border-width: 1rem; /*[decimales con .]ancho*/ /*px =unidad de medida. 1 px = unidad minima que se puede emplear; otras que se pueden usar son centimetros (regrande), pulgadas(RE GRANDE, "IN") ,mm(chico), pt (puntos, 1/70 pulgadas, chicon), pc (picas, 12 puntos), (no son exactos (ni en todos los dispositivos), ni confiables), HAY UNA BANDA  */
+} /* USAR EM /REM (relativo a la raiz {html}---> RELATIVO Y CONFIABLE, SIGNIFICA 2 VECES MAS GRANDE DEL TAMAÑO DE LA FUENTE QUE SE ESTA USANDO*/
+
+#fondo {
+    background-color: rgba(255, 0, 250/*;0.5 pero ya esta en opacity al pepe poner 2 iguales*/); /*LO MISMO QUE RGB PERO CON EL ALPHA, OSEA, OPACIDAD QUE VA DEL 0 AL 1, USAR . COMO DECIMAL, PODEMOS COMBINAR HASTA 3 NUMEROS COMO EL RBG PERO TAMBIEN CAMBIAR OPACIDAD: 1 MAX 0 INVISIBLE*/
+    opacity: 0.6; /*es alpha pero en otra linea y para el texto tambien, esta tiene prioridad ya que va ultima, el rgba puede tener 3 elementos y no 4 ya que lo ponemos despues al opacity*/
+    background-image: /*imagen del resltado de fondo*/ url("https://i.imgur.com/dpqRnSo.jpeg");
+    background-position: left /*X*/ top /*LEFT*/; /*tambien esta bottom y center*/
+    background: #0F0 url("https://i.imgur.com/dpqRnSo.jpeg") repeat-y left top / 100px 100px; /* definimos size aca, lo mismo pero en 1 sola linea, no debemos definir size antes sino se queda esa, ponerlo despues como hice ahora*/
+    background-repeat:repeat-x ; /*si se repita en x, y, no, etc*/
+    height: 100px; /* ANCHO Y ALTO SI SON DOS SIN , ;es la altura del resaltado, y la imagen*/
+    /*background-size: 200px 400px; o medidas ALTO Y ANCHO, auto (por defecto, tamaño original); cover (ocupa todo el horizontal), contain: contiene la imagen en el espacio que le dimos en height */
+}
+
+.margen {
+    background-color: chocolate;
+    margin: 15px /*20px 25px 30px */; /*MARGEN SEPARADO ARRIBA ABAJO, ETC. UTIL. top, right, bottom, left */
+    padding: 30px 25px 20px 15px; /*espacio dentro del bg. mucho arriba, derecha, poco abajo, poco izq.*/
+    border: solid 1px black; /*borde; en medio de padding y margin, un borde perfecto. Alcanza con poner el valor minimo en margin (15) y sera igual*/ /*fitea el contenido al margin*/; /*fitea el contenido al margin*/
+    overflow: scroll; /*el overflow (el texto que se salga del margin, va a estar, en este caso, HIDDEN*/ /* el scroll sirve para que el cuadro tenga barras abajo y a los costados asi podemos navegar por el cuadro, siempre que el margin sea grande, sino ni vamos a poder mover las barras de control*/
+    outline: 1px solid purple; /*fuera del border pero antes del margin; linea en el borde*/
+}
+
+.text { /*cuidado con importar muchas fuentes porque el css se puede hacer muy pesado*/
+    font-family:"Zeyada" , sans-serif; /* 2 EN CASO DE QUE NO CARGUE ZEDAYA. FONT QUE IMPORTAMOS DE GOOGLE FONTS, PONER EL NOMBRE AQUI Y LISTO. cambia el font, pone muchas por que si una no es cargada pasa a la siguiente*/
+    text-align: center; /*alineacion de text; left viene por defecto; podemos poner right, justificar (agrega espacio entre cada oracion para mas ordenanza, etc*/
+    text-decoration: underline; /*none es por defecto; LINE-TROUGH: TACHADO; overline: linea arriba del texto*/
+    text-shadow: 3px 5px 5px blue; /*VA A APARECER POR DETRAS DEL TEXTO ORIGINAL; sombra hacia la derecha, sombra hacia abajo, difuminado(blur) (3 MAXIMO, NO PASA NADA CON 4 ELEMENTOS)*/
+}
+
+a:link { /*TODOS LOS LINKS/hipervinculos. seleccionamos todos los links con A, ponemos : para seleccionar estado. Le idnidcamos a css lo que queremos hacer es seleccionar cuando el link no ha sido seleccionado*/
+    color: blueviolet;
+}
+
+a:visited { /*SIEMPRE EN ESTE ORDEN. DSP DE LINK Y ANTES DE LOS OTROS DOS. cuando YA HE VISITADO EL LINK SE PONE ESE COLOR*/
+    color: black;
+}
+
+a:hover { /* RESPETAR EL ORDEN COMO SE VE ACA INCLUSO SI SACAMOS ALGUNOS 1. LINK 2. VISITED 3.HOVER 4.ACTIVE, SINO NO VA A FUNCIONAR, HOVER PENULTIMO. cuando estoy PASANDO SOBRE EL LINK SE PONE ESE COLOR*/
+    color: chocolate;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} /*TODAS LAS PROPIEDADES QUE QUIERAS SE LE PUEDNE PONER: CUADROS, LINEAS, BG, TODO. cambia el font y el color cuando vuelo el link en este caso*/
+
+a:active { /*SIEMPRE VA ULTIMO. cuando estoy PINCHANDO SOBRE SIN APRETAR EL LINK SE PONE ESE COLOR*/
+    color: darkblue;
+    font-family: "Zeyada", sans-serif; /*cambia el font y el color cuando pincho en este caso*/
+}
+
+ul { /* TODOS LAS COSAS QUE QUERAMOS LE AGREGAMOS. seleccionamos la UNORDERED LIST SIN DIV EN ESTE CASO NI NADA, SI TUVIESEMOS MAS, PONDRIAMOS DIV PARA DEOCRAR LAS DOS DISTINTAS */
+
+background-color: cyan;
+list-style-type:none; /*(es al pedo poner otro estilo de lista ya que el padding esta full a la izq. entonces ni se ven los numeros) none: sin ninguna numeracion, PERO ESTA VIENE CON DEFECTO CORRIDA 40PX A LA DERECHA POR EL PADDING*/
+padding-left: 0%; /* reiniciamos el padding asi esta pegado a la izquierda porque antes venia por defecto de 40px a la izquierda por sacarle los numeros a la lista*/
+/* list-style-position: outside; se alinea el texto que salto de linea abajo del punto negro (de su "padre")*/
+}
+
+table {
+    width: 100%; /*usa todo el espacio HORIZONTAL DISPONIBLE DE LA PAGINA (de lado a lado)*/
+}
+
+th, td {/*como es la unica tabla, no hace falta que pongamos div o cosas asi para separar 2*/
+    border: solid 1px black;
+    border-collapse: collapse; /* no hay tanta separacion entre las celdas, mas ordenadito*/
+    padding: 5px; /*mas ordenado, mas espacio blanco en cada uno de los elementos*/
+    text-align: center; /*alineamos texto al centro para que este mas ordenada la tabla*/
+}
+
+th { /*modificamos las columnas solamente (mas abajo, + prioridad)*/
+    background-color: tomato;
+    color: rgb(0, 0, 0); /*color de letra*/
+}
+
+tr:nth-child(even) { /*ODD:PAR,  EVEN:IMPAR asi podemos seleccionar algunas celdas de nuestra tabla, en este caso, las PARES SOLAMENTE*/
+
+    background-color: #EEE;
+}
+
+    
+tr:hover { /*cuando pase SOBRE LAS CELDAS DE NUESTRA TABLA, SE CUMPLIRAN LOS SIG. ATRIBUTOS:*/
+
+background-color: rgb(42, 42, 49); /*empezamos a interactuar con la tabla ya que se pintan las celdas cuando pasamos por estas*/
+cursor: pointer; /* pone el icono de la manito cada vez que paseamos por una celda*/
+}
+
+span { /*ESTOS SON LOS VALORES X DEFECTO DISPLAY. hacemos que el display predeterminado cambie para que coma una linea entera por TODOS LOS span y asi que no aparezcan juntos*/
+    display: block;
+    max-width: 300px; /*el ancho maximo es 300px, puede ser menos, width 300px nos fixea ese valor y siempre sera de 300px*/
+    background-color: rgb(14, 38, 255); /*el bg esta representando 300px*/
+    /* display: none; , los elementos desaparecen de la pagina */
+    /* visibility: hidden; , los elementos desaparecen de la pagina */ 
+}
+
+/*etiquetas html que vienen por defecto con un display de inline: span, a (links), img OSEA ESTAS ETIQUETAS NO COMEN UNA LINEA ENTERA POR DEFECTO, PARA ROMPER ESO, ASIGNARLE BLOCK AL DISPLAY*/ 
+
+.inline { /*STOS SON LOS VALORES X DEFECTO DISPLAY. hacemos que el display predeterminado cambie para que no coma una linea entera por div (si le damos la clase a todos los divs va a hacer etso mismo, si le damos esto a un span no pasa nada ya que este es el valor predeterminado)  y que aparezcan juntos*/
+    display: inline 
+}
+
+#position { /* STICKY: RELATIVE + FIXED. SE ALINEA EN EL LUGAR CORRECTO PERO AL SCROLLEAR, BAJA.ABSOLUTE: SE VA A POSICIONAR RELATIVAMENTE AL ELEMENTO PADRE MAS CERCANO QUE ESTE TENGA, Y SI NO TIENE VA A USAR LA ETIQUETA DE BODY. LO MISMO QUE FIXED TODO SUPERPUESTO AL OTRO TEXTO PERO CUANDO SCROLLEAMOS NO PASA NADA. FIXED: ESTA FIXEADO ESE ELEMENTO PARA SIEMPRE A 20PX LEFT 20PX TOP SIN IMPORTAR QUE SCROLLEAMOS SE SEGUIRA MOSTRANDO. POSICION RELATIVA DE DONDE DEBERIA ESTAR POSICIONADO ESTE ELEMENTO. position:static es el valor por defecto de TODOS LOS ELEMENTOS DE HTML*/
+    position: sticky;
+    left: 20px; /*hace que aparezca la barra de abajo para desplazarse horizontalmente ya que este elemento relativo se desplazo 20px a la derecha*/
+    top: 25px; /* se desplaza hacia abajo, crea un espacio arriba y la barra lateral se hace mas grande*/
+
+}
+
+.left { /*flotando a la izquierda*/
+    float: left; /*hace flotar el elemento a la, en este caso, izquierda (no al reves)*/
+    width: 200px;
+    height: 200px;
+}
+
+.right {
+    float: right;
+}
+
+.column {
+    border: solid 1px red;
+    border-radius: 5px;
+    margin: 0 15 px;
+    padding: 10px 15px;
+    width: 33.3%; /* width porcentual respecto al elemento de la clase*/
+}
+
+.inline-block {
+    display: inline-block; /*INLINE: NO SE LES PUEDE AGREGAR WIDHT NI HEIGHT. (todo en las misma linea, no como el div).con inline block le podemos dar altura y ancho tambien, e smuy parecido al inline. Inline-block sirve para hacer menus de navegacion los cuales tengan los links de derecha a izq o al reves, mas ordenado y les podes dar un ancho fijo asi se ven uniformes, a diferencia de usar inline solo.*/
+    height: 25px;
+    background-color: blue;
+}
+
+.center { /*para centrar un elemento, tenemos que indicar siempre un ancho,y no del 100%, menor si o si, sino no va a estar centrado*/
+    width: 200px; /*ancho del bg color, el espacio donde vamos a centrar el texto*/
+    margin: 0 auto; /* 0 vertical y auto horizontal (alineado)*/
+    background-color: tomato;
+    padding: 50px 0px; /*50px vertical, 0 horizontal, se usa text-allign center tabto como para alinear el texto horizontal o verticalemnte, pero si es vertical necesitamos padding, y si es horizontal, width.*/
+    text-align: center; /*alineamos tetxo al centro*/
+}
+
+/*.right {
+    float:right; /*hace flotar a right, en este caso, a la derecha*/   
+
+
+
+
+    /*con CTRL } COMENTAMOS LINEA DE CODIGO, O DESCOMENTAMOS*/
+
+/* TIPOS DE BORDER:
+DOTTED, DASHED, SOLID, DOUBLE, GROOVE (3D), RIDGE (3D), INSET (3D), OUTSET (3D), NONE, HIDDEN
+*/
+
+/*cabe resaltar que si queremos que lo de h2 y h3 este en el div hay que ponerlo dos veces, sino hubiese puesto el segundo div todos los h3 tendrian el color oro
+
+/*el orden es importante ya que si le damos dos clases a una cosa y le decimos que se pinte en verde y luego rojo, el resultado sera rojo, por lo que el orden si importa aqui [el final tiene prioridad]*/
+/* p es lo mismo que decir .parrafo (clase)/ 
+/* ID = # / 
+/* CLASE = . / 
+
+/* barra * es usado para comentarios
+de multiple 
+linea también*/ 

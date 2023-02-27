@@ -1,0 +1,50 @@
+<p><a href="#">Click here</p></a> <!--#:nulo aqui. esto es un link muerto, no tiene ningun valor, es muy util a la hora de hacer una pagina para que despues volvamos aca y le asignemos el link. no tiene ningun valor si clickeamos.-->
+
+        <!-- Head (html>head>body) ALOJA LOS METADATOS Y LOS ELEMENTOS DETRAS DE ESCENA (EJ. LINK:STYLESHEET.CSS VA ADENTRO DE HEAD) O POR EJEMPLO: EL TITULO DE LA PAGINA CON <TITLE> va a adentro de head-->
+<head> 
+
+    <Title>HTML freeCodeCamp</Title>
+
+        <!-- Edicion de caracteres -->
+
+<strong>negrita</strong> <!--letra negrita-->
+<em>cursiva</em> <!--letra cursiva-->
+<s>tachado</s> <!--strike trough (texto tachado)-->
+<strike>texto</strike> <!--es lo mismo que <s>-->
+<small>textito</small> <!-- literalmente es mas chico el texto  -->
+
+    <body>
+    
+    
+    <form action="#">Formulario
+
+        <!-- Botones de radio -->
+
+    <label for="interior"><input value="interior" checked name="interior-exterior" id= "interior" type="radio" placeholder="texto">Interior </label><!--afuera va el nombre que va al lado del circulo. acordarse que input siempre va dentro de FORM-->
+    <label for="exterior"><input value="exterior" id="exterior" name="interior-exterior" type="radio" placeholder="texto">Exterior </label> <!--LABEL ES ETIQUETA, ESTO SIRVE PARA CUANDO EL USUARIO CLICKEE SOBRE EL TEXTO Y NO EL RADIO (CIRCULO, CASILLA) ESTE SE MARQUE-->
+    
+            <!-- Campo de texto -->
+
+    <input placeholder="texto" required> <!--si o si necesita poner ALGO EL USUARIO para que se envie el formulario, no lo puede enviar vacio, ya que este tiene el atributo required (obligatorio) si enviamos vacio nos dira una flecha de globo vinendo del cuadro: "complete este campo"-->
+    
+                <!-- Boton -->
+
+    <button type="submit">Enviar</button> 
+
+                <!-- Casillas de verificacion -->
+
+    <label for="checkbox"><input value="gatoputo" checked name="gato" type="checkbox" placeholder="ok" id="checkbox">Gato puto</label>
+    <label for="checkboxx"><input value="gato" name="gato" type="checkbox" placeholder="ok" id="checkboxx">Gato</label>
+    <label for="checkboxxx"><input value="gatopiola" name="gato" type="checkbox" placeholder="ok" id="checkboxxx">Gato piola</label> <!--para que cuando hagamos click en el texto "gato piola", marque la casilla-->
+    
+                <!-- (ADENTRO DE INPUT)Atributo "checked" por defecto, vendran esas opciones marcadas en las checkbox, radio, etc.-->
+
+    </form>
+    </body>
+    </head>
+    <!-- footer:texto mas pequeño =small-->
+    <!-- INPUT>VALUE="" ES IMPERATIVO.(se lo aplicamos a todos los elementos de un formulario). {ojo con el value en el imput de texto, porque le hardara ese valor al cuadroy el usuario tendra que borrar lo que le hayamos asignado a ese valor para escribir} SI UN USUARIO MARCA X CASILLA Y NO TIENE VALUE NO NOS LLEGA NADA. SI LA CASILLA "PEPE" TIENE EL VALUE="PEPE", EL SERVIDOR SOLO NOS DIRA ESTE VALUE Y PODRIAMOS TRABAJAR CON ESTE VALOR, SINO NO ESTARIAMOS TRABAJANDO CON NADA -->
+    <!-- INPUT ES BOTON, CUADRO DE TEXTO, AGREGAR ARCHIVOS -->
+    <!--linea 13. le asignamos el mismo grupo a todas mediante name y gato. ponemos laber for y el id del input (no sirve para nada porque ya esta encerrando ese input pero ahi esta la opcion)-->
+    <!--13,14. NAME LE ASIGNA UN GRUPO A MUCHOS RADIOS, OBVIAMENTE SIEMPRE QUE TENGAN LOS MISMOS NOMBRES. SOLO PODREMOS MARCAR UN SOLO BOTON CON EL NAME Y LOS DOS CON EL MISMO NAME, CUANDO MARCAMOS UNO SE DESMARCA EL OTRO, 1 SOLO RADIO SELECCIONABLE-->
+    <!-- 30,31,32. SI TENEMOS MUCHOS CHECKMARKS Y QUEREMOS QUE SE MARQUEN CUANDO DAMOS CLICK EN EL NOMBRE DEL MISMO AL LADO, TENEMOS QUE ASIGNARLE UNA ID DIFERENTE A CADA UNO Y ASIGNAR ESE VALOR A LABEL FOR. -->

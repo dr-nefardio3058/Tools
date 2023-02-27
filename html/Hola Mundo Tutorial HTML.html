@@ -1,0 +1,169 @@
+<!--con el ! y enter nos hace una plantilla predeterminada donde solo tenemos que borrar los meta al incio de un nuevo documento-->
+
+<!DOCTYPE html>
+<html lang="es"> <!--idioma de la página-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>primera pagina</title>
+    <style>
+        html {
+            font-size: 22px; 
+        }
+
+        body {
+            background-color: #201a1a; 
+            color: whitesmoke; 
+        }
+    </style>
+</head>
+
+<body> <!--cuerpo de la página-->
+    
+    <h1 id="TITULO">Hola a todos!</h1> <!--Titulo -->
+
+    <p>This is my first web page.</p> <!--Subtitulo-->
+    <p>Tabla a continuación</p>
+
+    <style>
+        table, th, td { 
+            border: 1px solid rgb(255, 255, 255);
+        }
+    </style>
+    <!--LE APLICAMOS ESTE ESTILO A LA TODO (TABLA, HEADERS Y CELDA) (1 pixel de linea (espacito en medio), solida y negra, en este caso)-->
+
+    <!--LISTA-->
+
+<table id="table" style="width: 500px;"> <!--Inicio de la tabla--> <!--siempre mismas filas que columnas (en este caso 2 columnas y 2 filas, pero mas filas, SINO HABRA MAS FILAS QUE CABECERAS)-->
+<tr> <!--(TABLE ROW)-->
+    <thead> <!-- {OPCIONAL}[SIEMPRE DENTRO DEL TR> THEAD]para agregar un poco mas de espacio para que quede claro que es el head, el body es lo mismo pero con las celdas(una pelotudez)-->
+    <th class="columnas">Producto</th> <!--[HEADER]CABECERA DEL CUADRO (COLUMNAS) en este caso 2-->
+    <th class="columnas">Precio</th> <!--[HEADER]CABECERA DEL CUADRO (COLUMNAS) en este caso 2-->
+</thead> <!--cerramos el thead-->
+</tr> <!--cerramos tr-->
+<tr>
+    <tbody> <!--[{OPCIONAL}SIEMPRE DENTRO DEL TR> TBODY]para agregar un poco mas de espacio para que sea mas clara la celda del head(una pelotudez)-->
+    <td class="filas">Sanguche</td> <!--CELDAS (EN ESTE CASO 2) -->
+    <td class="filas">2 mangos</td> <!--CELDAS (EN ESTE CASO 2) -->
+</tbody> <!--cerramos tbody-->
+</tr>
+
+<tr>
+   <tbody>
+    <td class="filas">Chancho</td>
+    <td class="filas">37 pichi</td>
+</tbody>
+</tr>
+
+<tr>
+    <td class="filas">Salame</td>
+    <td class="filas">dos luquitas</td>
+</tr>
+
+<tr>
+<td> </td> <!--ESPACIO BLANCO EN FILA (fila 4 DE "PRODUCTO")-->
+<td class="filas" style="font: bold; color: #16efff;">Total: 2,039 pesos <span style="color: blue;">argentinos</span></td> <span> <!--creamos etiqueta color dentro de un td (le podemos cambiar el color de cada letra incluso, o tamaño, o cualquier cosa)-->
+</tr>
+
+</table> <!--Fin de la tabla-->
+
+<!--LISTA ORDENADA-->
+
+<hr><!--LINEA BLANCA-->
+
+    <ol> <!--UL:lista no ordenada (PUTNOS NEGROS)//OL: LISTA ORDENADA CON NÚMEROS (SIN PUNTO NEGRO)-->
+ <li id="actividades">Elemento 1</li>  <!--[elemento]listed items-->
+ <OL> 
+    <li>actividad 1</li>
+    </ol>
+ <li><a href="https://www.youtube.com/watch?v=MJkdaVFHrto">Elemento 2</a> </li> <!--[elemento] listed items LISTA CON HIPERVINCULO--> 
+ <li>Elemento 3</li> <!--[elemento]listed items-->
+ <OL> 
+    <li style="list-style-type: lower-alpha;">subejercicio I</li> <!--modificando texto con style-->
+    <li style="color: aquamarine;">subejercicio II</li> <!--subejercicios, OL ANIDADO dentro de ol(se puede hacer infinitas veces)-->
+    <li style="font-size: medium;">subejercicio III</li>
+ </OL>
+</ol> <!--cierre de la accion-->
+
+<!--TEXTO EINSTEIN-->
+
+    <hr> <!--linea blanca-->
+    <h4>En 1905, <span id="texto" style="color: rgb(133, 231, 22);">cuando era un joven físico desconocido, en la Oficina de Patentes de Berna, </span> publicó su teoría de la relatividad especial. <br> <br>En ella incorporó, en un marco teórico simple fundamentado en postulados físicos sencillos, <span style="font-size: small;">y fenómenos estudiados</span> antes por Henri Poincaré y Hendrik Lorentz.  <br> <br>Como una consecuencia lógica de esta teoría, dedujo la ecuación de la física más conocida a nivel popular: la equivalencia masa-energía, E=mc². Ese año, publicó otros trabajos que sentarían algunas de las bases de la física estadística y de la mecánica cuántica.</h3>
+
+<hr> <!--linea blanca-->
+
+<!--FORMULARIO-->
+
+<form action="/formulario" method="get"> <!--siempre dentro de body el form(ulario) El atributo action (es una url en este caso puse esto sigueindo al tutorial pero no es debido)define la ubicación (URL) donde se envían los datos que el formulario ha recopilado cuando se validan. MANDA AL USER A ESA URL TAMBIEN--> <!--los metodos mas comunes son get y psot, es como va a recibir la informacion el servidor, como un post, un get o dialogo (poco usado este ultimo)-->
+    <label for="nombre">nombre</label> <!--nombre al lado del espacio en blanco-->
+<input type="text" id="nombre" name="name"placeholder="escribi bobo"> <!--{type}que tipo de dato tiene que ingresar: file, button,password (censura caracteres),color, radio (botoncito para marcarlo de color azul o no)(especie de checkmark)checkbox,email(sino tiene @ no sirve), hidden, date, text, week y datetime-local; si ponemos cualquier cosa será un cuadro para escribir solamente--> <!--si pones algo dentro del input type comillas te autocompleta con tipos existentes en caso de olvidar--> <!--PLACECOLDER ES EL AUTOCOMPLETADO LIGHT QUE CUANDO DAMOS CLICK SE DESAPARECE, CUANDO EL USUARIO APRETA DENTRO DEL CAMPO SE SALE PARA QUE VEA COMO SE PONIA. COMO PONER NOMBRE Y PLACEHOLDER "INGRESE SU NOMBRE"-->
+<!--Type tiene por defecto el tipo text, si ponemos type submit, se creara un boton de tipo submit, esta todo conectado-->
+<br> <!--salto de linea-->
+<label for="apellido">apellido</label>
+<input type="text" id="apellido" name= "surname"placeholder="apellido bobo"> <br> <!--salto de linea-->
+<!--tanto el metodo post como el get no son seguros, get envia datos a traves de la url y post por la cabecera-->
+<!--LABEL SIEMPRE SEGUIDO DE UN INPUT-->
+<label for="password">contraseña</label>
+<input type="password" name="password" id="password" placeholder="contraseña capo">
+
+<!--el NAME="" ES CLAVE EN EL GET {MAXIMO 250 PALABRAS POR LO QUE SI EL FORMULARIO ES GRANDE NO NOS VA A SERVIR LA URL, USAR POST EN ESTOS CASOS}(EN EL POST ES IMPORTANTE PERO LA URL NO DICE LOS DATOS EXPLICITAMENTE) YA QUE SIN ESTE LA INFORMACION NO SE VINCULA A LA ID Y LA INFO NO SE ENVIARA, SOLO EL COMENTARIO QUE YA VIENE CON EL NOMBRE POR DEFECTO. IMPERATIVO PONER NAME Y LO QUE QUERAMOS, ESA ES LA INFO QUE VA A MANDAR. LA RUTA DE LA PAGINA EN ESTE CASO ES: file:///C:/formulario?name=""&surname=""&comentario=""-->
+<br> <!--salto de linea-->
+<br>
+<label for="comentario">comentario</label> 
+<textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="ingrese comentario">jaja vas a tener que borrar esto</textarea> <!--cuadrado grande predeterminado personalizable con las dimensiones que queramos--> <!--el value en el text area va cuando finaliza la tag textarea, como en este caso, pero no hay que poner ningun value, solo el texto en la posoicion indicada alcanza. El value lo que hace es pone un valor predeterminado, no es un placeholder, y el usuario si tendra que borrar el value si quere poner otra cosa-->
+<br>
+<label for="email">email</label>
+<input type="email" name="email" id="email" value="sosunpelotudo@gmail.com"> <br>
+<button type="submit">Mandalo</button> <!--envia todos los datos de formulario a action-->
+</form>
+</body>
+
+<hr> <!--LINEA BLANCA-->
+
+<!--GALERIA DE IMÁGENES-->
+
+<h3>galeria de <span style="color: blue;"> imagenes y </span><span style="background-color: #16efff;">videos</span></h3>
+
+<img class="img" src="https://i.imgur.com/S0uPyBY.jpeg" alt="xd" width="200">
+<img class="img" src="https://i.imgur.com/Z29VKAO.png" height="200" width="300" > <!--Imagen-->
+<video id="video" width="320" height="240" muted autoplay controls>
+    <source src="https://i.imgur.com/pzd4oY2.mp4" >
+</video> 
+<video id="video2" width="320" height="240" translate="yes" controls >
+<source src="https://i.imgur.com/OuQqS6u.mp4">
+</video>
+<br> <br> <!--salto de linea(en este caso doble)-->
+
+
+<hr> <!--LINEA BLANCA-->
+
+<!--Atajos e hipervínculos-->
+
+<h5>Atajos e hipervínculos</h5>
+
+<a href="https://www.youtube.com/watch?v=MJkdaVFHrto">Video tutorial html</a> <br><br><!--Hipervinculo-->
+
+<a href="#TITULO">Ir al comienzo</a><!--Podemos crear un hipervinculo a una id especifica (sólo ID, no sirve con class), en este caso nos dirigira a la id TITULO, y el nombre de este hipervinculo será "Ir al comienzo", útil para navegar en una página y no tener que escrollear mucho--> <br>
+<a href="#nombre">Ir al formulario</a> <br>
+<a href="#table">Ir a la tabla</a> <br>
+<a href="#actividades">Ir a las actividades</a> <br>
+<a href="#texto">Ir al texto</a> <br>
+</html> <!--Cierre//FinAlgoritmo-->
+
+<!--Comentario-->
+<!--h1 (parrafo + grande ) - h6 (+ chico) <p> (parrafo granditito)-->
+<!--REFERENCIAS. 2. INGLES 5.CODIFICACION (SIEMPRE =IGUAL)-->
+<!--6. TITULO 9. TAMAÑO LETRA 13. 14. BG Y COLOR-->
+<!--br = salto de linea (pueden ser 1+) si los ponemos juntos(<br> <br>)-->
+<!--span DE TODO, STYLE COLOR FONT DE TODO ...: pone cierto texto modificado a gusto-->
+<!--video (insertar video)... controls (mostar controles video---> 
+<!--autoplay:autocorre el video// muted: video muteado por defecto-->
+<!--source: recurso de video/iamgen/fuente-->
+<!--button: boton con diferentes tipos: submit/button/reset, con >y el nombre que queramos -->
+<!--SIEMPRE QUE SE EMPIEZA UNA ACCION "<OL>" CUANDO SE TERMINA, LA BARRA / "</OL>"-->
+<!--no hay diferencia entre mayus y minus "OL Y ol"-->
+<!--TAB: IDENTAR-->
+<!--TODAS LAS ETIQUETAS SE LE PUEDE PONER UN STYLE DE LO QUE QUIERAS ADENTRO-->
+<!--las medidas siempre en px (pixeles)-->
+<!--</div>: {no sirve para un carajo anidar divs} se emplea para definir un bloque de contenido o sección de la página, para poder aplicarle diferentes estilos e incluso para realizar operaciones sobre ese bloque específico. para separar y crear espacios tambien-->
+<!--id (1) y class(1+): PARA IDENTIFICAR ELEMENTOS QUE LUEGO PUEDEN SER SELECCIONADOS CON SELECTORES, EL CÓDIGO NO CAMBIA EN ABSOLUTO, NADA MÁS ES EFICIENTE PARA IDENTIFICAR Y PARA LOS QUE LEAN EL CÓDIGO-->

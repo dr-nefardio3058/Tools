@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap 5 Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--siempre dentro de meta, para que sea responsivo a dispositivos-->
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS (para que funcione boostrap en la pagina. IMPERATIVO) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> <!--no es para que ande la pagina pero es necesario si usamos js-->
+</head>
+
+<!--h1 - h6-->
+
+<!--(+ bold) p's and h's can be combined for smaller h's-->
+
+<p class="h1">h1 Bootstrap heading</p>
+<p class="h2">h2 Bootstrap heading</p>
+<p class="h3 small">h3 Bootstrap heading CHICO</p>
+<p class="h4">h4 Bootstrap heading</p>
+<p class="h5 mark">h5 Bootstrap heading RESALTADO</p>
+<p class="h6">h6 <abbr title="Getboostrap.com">Bootstrap</abbr> heading</p> <br> <hr>
+
+<!--abbr:  element surrounded with abbr will have a dotted underline and a cursor with question mark on hover, and the "title showing up on a chart on hover too".-->
+
+<!--todo dentro de un container:displays (texto grande y llamativo)-->
+
+<div class="container mt-3"> <!--m-3 es padding superior-->
+    <h1>Display Headings</h1>
+    <p>Display headings are used to stand out more than normal headings (larger font-size and lighter font-weight):</p>
+    <h1 class="display-1 text-start">Display 1</h1> <!--left alligned text-->
+    <h1 class="display-2 text-center">Display 2</h1>
+    <h1 class="display-3 text-end"><code>Display</code>3</h1> <!--code pone el texto rosadin y con una letra mas de imprenta de maquina de escribir, no es hipernvinculo-->
+    <h1 class="display-4 text-lowercase">Display 4</h1> <!--minus-->
+    <h1 class="display-5 text-uppercase">Display 5</h1> <!--mayus-->
+    <h1 class="display-6 text-capitalize initialism"><kbd>display</kbd>6</h1> <!--INITIALISM: KDB ´´ + CHIQUITO. CAPITALIZE 1ST WORD. KBD es el emmbeded de discord, como cuando rodeamos el texto con ´ ´, sale el texto como dentro de un cuadro -->
+</div> <br> <hr>
+
+</html>
+
+<div class="container mt-3">
+    <h1>Blockquotes</h1>
+    <p>The blockquote element is used to present content from another source:</p>
+    <blockquote class="blockquote">
+    <p><pre>For 50 years, WWF has been protecting the future of nature. </pre>The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p> <!--texto con font mas de source de otro lado, de dicho-->
+
+<!--el pre lo que hace es que pone el texto de una manera de maquina de escribir y nos pone una barrita abajo de este si el tamaño de este supera el de la ventana con sus px. 
+Text in a pre element
+is displayed in a fixed-width
+font, and it preserves
+both      spaces and
+line breaks.-->
+
+    <footer class="blockquote-footer">From WWF's website</footer> <!--firma mas clarita de abajo-->
+    </blockquote>
+</div> <br> <hr>
+
+<div class="container mt-3">
+    <h1>Description Lists</h1>    
+    <p>The dl element indicates a description list:</p>
+    <dl>
+    <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+    </dl>     
+</div> <br> <hr>
+
+<div class="container">
+    <h2>Typography</h2>
+    <p>The class .list-unstyled removes the default list-style and left margin on list items (immediate children only. puntos blancos):</p>
+    <ul class="list-unstyled">
+    <li>Coffee</li>
+    <li>Tea
+        <ul>
+        <li>Black tea</li>
+        <li>Green tea</li>
+        </ul>
+    </li>
+    <li>Milk</li>
+    </ul>
+</div> <br> <hr>
+
+<div class="container mt-3">
+    <h2>Typography</h2>
+    <p>The class .list-inline places all list items on a single line, when used together with the .list-inline-item:</p>
+    <ul class="list-inline"> <!--columnas-->
+    <li class="list-inline-item">Coffee</li>
+    <li class="list-inline-item">Tea</li>
+    <li class="list-inline-item">Milk</li>
+    </ul>
+</div>
+
+</body>
+</html>
+
+
+
+<!--other decorations in class=""-->
+<!--text-decoration-none: Removes the underline from a link-->
+

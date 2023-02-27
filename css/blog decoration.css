@@ -1,0 +1,153 @@
+html { /* es lo mismo que *, todo dentro del html se vera afectado por esto, si es que despues esto no lo tocan mas adelante en otro estilo y le ponen esta letra. + abajo + prioridad*/
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #efefef; /*gris muy claro para que las etiquetas resalten con el fondo*/
+}
+
+header { /*todos los header tendran este estilo*/
+    background-image: url(world.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 3rem 2rem ; /*3 rem arriba 2rem izquierda. todo este espcio sera ocupado por el background color*/
+}
+
+header h1 { /*todos los h1 del header van a tener este estilo, en este caso el titulo*/
+    font-size: 4rem; /*4x16*/
+    text-align: center;
+}
+
+header img { /*alinea todas las imagenes de header al centro, por defecto estas img tienen el valor inline, hay que cambiarlo*/
+    display: block;
+    margin: auto;
+}
+
+.container {
+    width: 400px; /*mas que nada porque las imagenes estan usando un ancho de 400px*/
+    margin: 0 auto; /*0 top, right automatico, se alinea*/
+}
+
+article h3, article h4 {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+section article { /*le aplicamos esto a todos los articulos (dentro de la seccion, osea todos los posts)*/
+    transition: box-shadow 0.3s ease; /*all anima todos los efectos de html COMPATIBLES. PROPIEDAD A HACERLE TRANISCION, TIEMPO DE LA TRANSIICON, EFECTO DE LA TRANSICION. nos permite indicar que propiedades de css queremos que sean animadas, le indicamos un origin, y meidante un evento, un final*/
+    background-color: #fff;
+    margin: 1rem 0; /*el background color ira un rem mas abajo del primer bg color del post arriba, 0 a la derecha, dando la ilusion de tarjeta*/
+    border-radius: 0.5rem;
+    padding: 0.25rem 0; /*vertical 0.25 y 0 horizontal, si aca agregamos padding horzontal se nos separa la imagen*/
+    cursor: pointer; /*cuando nos paseamos arriba de algun section article aparece la manito del cursos*/
+}
+
+section article:hover { /*podes poner todos los filtros y secciones especificas aca, cada vez que nos peseemos sobre SECTION>ARTICLE SE MOSTRARA un sombreado a la tarjeta con box-shadow*/
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 3); /*horizontalmente 0 rem de box shadow desplazada, abajo 0.1, blur o difuminacion de 0.4 y en el rgba ponemos que la opacidad sea del 30% (3)*/
+}
+
+section article h2, section article p{ /*titulo y parrafos de los articulos en este caso, se puede filtrar tanto como se desee y usar , para que les demos los mismos atributos*/
+    margin: 1rem;
+}
+
+#noticia1, #noticia2, #noticia3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+
+article p{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+}
+
+
+header img {
+    border-radius: 5px;
+}
+
+#dia {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:x-large;
+    background-color: #e6dcdc;
+    margin: 15px 0 20px 0;
+    text-align: center;
+    border: 1px #efefef;
+}
+
+.cont:hover {
+    color: rgb(0, 174, 255);
+}
+
+.cont:active {
+    color: red;
+}
+
+.cont:visited {
+    color: rgb(209, 11, 209);
+}
+
+article, h2, h4, p{
+    color: black;
+    text-decoration: none;
+    
+}
+
+.text {
+    text-decoration: none;
+}
+#contac {
+    font-size:large;
+    color: wheat;
+}
+
+footer{
+    background-color: #383030;
+    padding: 3rem;
+    color: wheat;
+}
+
+footer section {
+    float: right;
+}
+
+footer p {
+    margin: 0;
+}
+
+#seccion1 {
+    background-color: #383030;
+}
+
+#noticia4, #noticia5, #noticia6, #noticia7 {
+    padding: 0 0 0 65px;
+    text-decoration: none;
+}
+
+footer a {
+    transition: color 0.3 ease;
+    color: rgb(45, 0, 243);
+    text-decoration: none; /*sin decoracion de texto*/
+}
+
+footer a:hover {
+    color: cornflowerblue;
+}
+
+article img { 
+    border-radius: 15px; /*borde redondeado de 15px. 50% es circulo, util para presenatar personas*/
+    width: 300px;
+    height: 300px;
+    display: block; /*asi se alinean las img*/
+    margin: auto; /*asi se alinean las img*/
+    border: #fff;
+    border-width: 2px; /*tamaño y estli de borde*/
+    border-style: groove; /*tamaño y estli de borde*/
+}
+
+
+
+/* CLASES CON . (id>clases>selectores de tipo(div, article) si aplicamos dos estios a un mismo elemento con misma clase y variable en css el id se pioriza, no el class, no importa el orden, mas arriba o mas abajo)
+ID'S CON #      (+ a - especifico) (una variable que se come a otra es variable padre y la mas chica es heredada. ej. body(padre)>article(hijo) *>root>html>body (el orden vale, no como el otro caso, el que este mas abajo es el que se aplicara ultimo
+TAGS SOLAS SIN NADA (HEADER) */
