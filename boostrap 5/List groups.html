@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<!-- To create a basic list group, use an <ul> element with class .list-group, and <li> elements with class .list-group-item -->
+<!--list group>list group item-->
+<!--.active para remarcar el item actual, con el que estamos interactuando ahora-->
+<!--.disabled. lo mismo que las paginations, el item esta deprecated, gris y no interactua-->
+
+<div class="container mt-3">
+  <h2>Basic List Group</h2>
+  <ul class="list-group list-group-numbered"> <!--esta medio mal ya que estamos metiendo algo no LI a nuestro UL, lo podemos areglar con el comentario de las lineas 27, pero anda-->
+    <li class="list-group-item active">1 item</li>
+    <a href="https://www.w3schools.com/bootstrap5/bootstrap_list_groups.php" class="list-group-item list-group-item-action">Second item</a>
+    <li class="list-group-item disabled bg-dark">Third item</li>
+  </ul>
+</div>
+
+<!-- .list-group-numbered nos enumera la lista simple y llanamente, lo ponemos en el UL, podemos personalizar todo y demas, solo es decoracion -->
+<!-- Se pueden crear hipernvinculos para los elementos de esta linea siguiendo la iteracion de la linea 20. Ponemos a en vez de li.-->
+
+<div class=" container mt-3 list-group list-group-flush">
+
+<!-- Con .list-group-flush lo que hacemos es remover los borderes y las esquinas, mera decoracion que va en el UL -->
+
+    <a href="https://www.w3schools.com/bootstrap5/bootstrap_list_groups.php" class="list-group-item list-group-item-action text-danger">First item</a>
+    <a href="#" class="list-group-item list-group-item-action disabled">2 item</a>
+    <a href="#" class="list-group-item list-group-item-action">Third item</a>
+    <a href="https://github.com/dr-nefardio3058" class="list-group-item list-group-item-action text-info">4TH item</a>
+</div> <br>
+
+<div class="container mt-3">
+<ul class="list-group list-group-horizontal list-group-numbered">
+    <li class="list-group-item bg-secondary text-danger">1 item</li>
+    <li class="list-group-item-warning">Second item</li>
+    <li class="list-group-item-action text-info">Third item</li>
+    <li class="list-group-item-secondary">4 item</li>
+</ul>
+</div> <br>
+
+<!-- .list-group-horizontal es para que la lista en vez de horizontal, sea vertical, simplemente eso -->
+<!-- .list-group-item-( cualquier clase contextual) (segunda CLASE SIEMPRE) sirve para estilizar una celda a esa clase = warning = texto amarillo, fondo ammarillo, etc. -->
+
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action">Action item</a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-success">Success item</a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Secondary item</a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-info">Info item</a>
+    <a href="https://github.com/dr-nefardio3058" class="list-group-item list-group-item-action list-group-item-warning">Warning item</a>
+    <a href="https://github.com/dr-nefardio3058" class="list-group-item list-group-item-action list-group-item-danger">Danger item</a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Primary item</a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Dark item</a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-light">Light item</a>
+  </div> 
+
+<!--ocupan toda la pagina por defecto estas listas, sino ponemos el container mt-3-->
+<!-- estos son listas contextuales pero con hipervinculos -->
+
+<div class="container mt-3">
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+    Inbox
+    <span class="badge bg-danger rounded-pill">hola. s1</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+    Ads
+    <span class="badge bg-success rounded-pill">15,#%#/%"#" 9'9"</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+    Altura
+    <span class="badge bg-primary rounded-pill">example text exemaple test ecampe</span>
+    </li>
+ </ul>
+</div> <br>
+
+<!--badges en los grupos de listas-->
+<!--.rounded-pill para que las badges esten mas pulidas-->
+<!--.d-flex para que las badges se posicionen a la derecha de la pantalla-->
+<!-- NÓTESE QUE LOS TEXTOS DE LAS BADGES SE AUTOACOMODAN A ELLAS, NUNCA SE VA A SALIR EL TEXTO POR SU LONGUITUD. LINEA 78 -->
+
+</body>
+</html>

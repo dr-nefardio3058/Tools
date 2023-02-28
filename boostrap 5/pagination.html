@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2>Pagination</h2>
+  <p>To create a basic pagination, add the .pagination class to an ul element. Then add the .page-item to each li element and a .page-link class to each link inside li:</p>                  
+  <ul class="pagination pagination-sm"> <!--tamaño pequeño-->
+    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</div>
+
+<!-- 16. The .disabled class is used for un-clickable links, no anda directamente y esta mas grisesito todo -->
+<!-- 17. The .active class is used to "highlight" the current page. Se marca la pagina 1 porque es la activa, es en la que estamos ahora -->
+
+<div class="container mt-3">
+    <ul class="pagination justify-content-center"> <!--tamaño normal-->
+      <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </div>
+
+<!-- .page link para las a dentro de li. obligatorio asi nos crea este estilo, sino seran las cajas con links sueltos por todos lados, ya que no estamos vinculando las cajas con los links -->
+
+<div class="container mt-3">
+    <ul class="pagination justify-content-end pagination-lg"> <!--tamaño grande con la clase .pagination-lg, despues de .pagination (si o si .pagination sino pasa a ser una lista desordenada)-->
+      <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </div> <br>
+
+<!--la pagination es tan grande en la linea 38 que casi ni se ve que esta alineada "end"; pero si lo está.-->
+<!--SIEMPRE que pongamos una alineacion de nuestra pagination, ponemos .pagination .justify... si o si, si lo ponemos al final se va a confundir el tamaño con la alineacion y se va a transfromar en una ul-->
+
+<!-- The .breadcrumb and .breadcrumb-item classes indicates the current page's location within a navigational hierarchy -->
+
+<div class="container mt-3">
+    <h2>Breadcrumbs</h2>
+    <p>The .breadcrumb class indicates the current page's location within a navigational hierarchy:</p>                  
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a href="https://www.w3schools.com/bootstrap5/bootstrap_pagination.php">Fotos</a></li>
+      <li class="breadcrumb-item"><a href="https://github.com/dr-nefardio3058">2020</a></li>
+      <li class="breadcrumb-item"><a href="https://google.com">Casa</a></li>
+      <li class="breadcrumb-item active">Con la familia</li>
+    </ul>
+</div>
+
+<!-- Aqui para que tenga alineacion horizontal, en vez de poner .page-item, ponemos .breadcrumbitem para que se ponga este estilo horizontal, y marcamos como activo (lo contrario a disabled pero con los mismos atributos), donde Rome, la ultima pag de la jerarquia, donde estamos ahora, se pone en grisesito, y todas las demas paginas estan en verde, como con hipervinculo, las cuales podemos sacarle la raya de abajo con text-decoration-none -->
+<!-- Todo en las paginations o breadcrumbs ES un hipervinculo el cual podemos clickear y nos manda a otro lado. En este caso la mayoria son links muertos. -->
+
+</body>
+</html>
