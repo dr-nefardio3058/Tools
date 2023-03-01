@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+<h2>Dropdowns</h2>
+<p>The .dropdown class is used to indicate a dropdown menu.</p>
+<p>Use the <code>.dropdown-menu</code> class to build the dropdown menu.</p>
+<p>To open the dropdown menu, use a button or a link with a class of <code>.dropdown-toggle</code> and data-toggle="dropdown".</p>                                          
+<div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+    Texto del boton
+    </button>
+    <ul class="dropdown-menu"> <!-- la flechita -->
+        <li><h5 class="dropdown-header text-danger">Dropdown header 1</h5></li>
+    <li><a class="dropdown-item disabled" href="#">1</a></li>
+    <li><img src="img/presidente sarmiento.jpeg" alt="" width="20px" ><a class="dropdown-item text-info bg-success" href="https://github.com/dr-nefardio3058">Link 2</a></li>
+    <li><a class="dropdown-item active" href="#">Link 3</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h5 class="dropdown-header bg-info">Dropdown header 2</h5></li>
+    <li><a class="dropdown-item" href="#">OTRO LINK PERO SEPARADO</a></li> <!--divide con una linea las otras partes y esta-->
+    </ul>
+</div>
+</div>
+
+<!-- Highlight a specific dropdown item with the .(dropdown-item) active class (adds a blue background color).
+
+To disable an item in the dropdown menu, use the .disabled class (gets a light-grey text color and a "no-parking-sign" icon on hover) (literalmente no anda el boton/link) -->
+
+<!-- Los dropdowns son interactivos, osea si ponemos un texto hiper largo la caja se va a adaptar y nunca se va a "rebalsar" el texto -->
+
+<!-- The .dropdown-header class is used to add headers inside the dropdown menu -->
+
+<!-- Se puede poner cualquier cosa en cada celda del dropdown  (colores, imagenes, etc.)-->
+
+<div class="container mt-3">
+<div class="dropdown dropend"> <!-- lo mismo pero el dropdown a la derecha -->
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+    Dropend derecha
+    </button>
+    <ul class="dropdown-menu">
+    <li><a class="dropdown-item text-info" href="#">Normal</a></li>
+    <li><a class="dropdown-item active" href="#">Active</a></li>
+    <li><a class="dropdown-item disabled" href="#">Disabled</a></li>
+    </ul>
+</div>
+</div>
+
+<div class="container mt-3">
+    <div class="dropdown dropstart"> <!-- lo mismo pero el dropdown a la izquierda -->
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+        Dropend izquierda
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item text-info" href="#">Normal</a></li>
+        <li><a class="dropdown-item active" href="#">Active</a></li>
+        <li><a class="dropdown-item disabled" href="#">Disabled</a></li>
+        <li><span class="dropdown-item-text">Just Text</span></li>
+        </ul>
+    </div>
+    </div>
+
+<!-- 65 .dropdown-item-text es para que cuando pongamos un elemento sea plain text y no un href, simplemente eso -->
+
+<!-- .dropdown-menu-end alinea el dropdown a la derecha de el menu dropdown -->
+
+<div class="container mt-3">
+<div class="dropup">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+    Dropup button
+    </button>
+    <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Link 1</a></li>
+    <li><a class="dropdown-item" href="#">Link 2</a></li>
+    <li><a class="dropdown-item" href="#">Link 3</a></li>
+    </ul>
+</div>
+</div>
+
+<!-- 72 = .dropup nos despliega el menu para ARRIBA, pero para hacer esto necesita haber un espacio arriba, como en este caso, ya que no se ajustara si el espacio es muy chico, y no funcionara -->
+
+<div class="container mt-3">
+    
+<h3>Botones combinados con dropdown <span style="font-size: small">(todos los items son links en este caso)</span></h3>
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">Apple</button>
+    <button type="button" class="btn btn-primary">Samsung</button>
+    <div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Tablet</a></li>
+        <li><a class="dropdown-item" href="#">Smartphone</a></li>
+    </ul>
+    </div>
+</div>
+
+<div class="container mt-3">
+<div class="btn-group-vertical">
+    <button type="button" class="btn btn-primary">Apple</button>
+    <button type="button" class="btn btn-primary">Samsung</button>
+    <div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Tablet</a></li>
+        <li><a class="dropdown-item" href="#">Smartphone</a></li>
+    </ul>
+    </div>
+</div>
+
+<!--todos los elementos representan enlaces, para cambiar esto poner .dropdown-item-text-->
+
+</body>
+</html>
