@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Range</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2>Custom Range</h2>
+  <p>To create a custom range menu, add the .form-range class to the input element with type="range" (el valor del range default es 100, por eso da 5 pasos con step="20"):</p>
+  <form action="/action_page.php">
+    <label for="customRange" class="form-label">Custom range</label>
+    <input type="range" class="form-range" id="customRange" name="points" step="20">
+    
+    <!-- Step 20 es con paso 20, osea que la linea no se mueve de 1 en 1, sino de 20 en 20 -->
+
+    <h2>Min and Max Range</h2>
+  <p>Use the min and/or max attribute to specify the minimum/maximum value of a range: (aca el maximo es 4, por lo que ira con paso 1 (default) de 0 hasta 4, tambien podemos especificar un minimo, en este caso -1, osea va del -1 al 5, osea que cubrira 5 espacios el range)</p>
+  <form action="/action_page.php">
+    <label for="customRange" class="form-label">Custom range</label>
+    <input type="range" class="form-range" id="customRange" name="points" min="-1" max="4">
+
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+  </form>
+
+</div>
+
+</body>
+</html>
