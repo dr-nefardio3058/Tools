@@ -1,0 +1,66 @@
+<!-- The Modal component is a dialog box/popup window that is displayed on top of the current page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+<h3>Modal Example</h3>
+<p>Click on the button to open the modal.</p>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+Abrir
+</button>
+</div>
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+<div class="modal-dialog modal-sm"> <!-- Después del .modal-dialog ponemos .modal-* (sm/lg/xl/xxl/FULLSCREEN [toda la pagina]) para modificar el tamaño del cuadro que va a salir cuando demos click -->
+
+<!--Refering line 25: By default, modals are "medium" in size (500px max-width) -->
+
+    <div class="modal-content">
+
+<!-- .modal .fade agrega una pequeñisima animacion, para sacarla, sacar el .fade y listo -->
+
+<!-- Other sizes: (siempre despues del modal.dialog [excepto 35])
+
+.modal-dialog (only)        When you have a lot of content inside the modal, a scrollbar is added to the page. (everything moves with scrollbar: modal and also the page behind)
+.modal-dialog-scrollable     it is possible to only scroll inside the modal, instead of the page itself (just modal moves with scrollbar)
+.modal-dialog-centered      Center the modal vertically and horizontally within the page
+.modal-fullscreen-sm-down	Fullscreen below 576px	
+.modal-fullscreen-md-down	Fullscreen below 768px	
+.modal-fullscreen-lg-down	Fullscreen below 992px	
+.modal-fullscreen-xl-down	Fullscreen below 1200px	
+.modal-fullscreen-xxl-down	Fullscreen below 1400px -->
+
+    <!-- Modal Header -->
+    <div class="modal-header">
+        <h4 class="modal-title">Título</h4>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" title="Salir"></button> <!--TITLE ES EL CUADRITO QUE SALE CUANDO PASAMOS SOBRE LA "X" PARA SALIR DEL MODAL -->
+    </div>
+
+    <!-- Modal body -->
+    <div class="modal-body"> Cuerpo del modal pequeño (por linea 25) <br> <br>
+        Hola como estas vos?
+    </div>
+
+    <!-- Modal footer -->
+    <div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+    </div>
+
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
