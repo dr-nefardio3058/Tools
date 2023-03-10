@@ -1,0 +1,8 @@
+body {
+    background-color: lightblue;
+    color: darkblue;
+    font-size: 18px;
+  } 
+  
+/* Nota: el css es el transpilado de scss, por lo que cuando hacemos un html no ponemos nada que tenga que ver con el
+sass ya que no lo entiende, en cambio enlazamos con un css transpilado y listo (los css minified no son necesarios, son info visual y corta de lo que transpillamos) */

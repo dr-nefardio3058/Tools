@@ -1,0 +1,18 @@
+// Sass has a mechanism for this: If you start the filename with an underscore, Sass will not transpile it. Files named this way are called partials in Sass.
+// (This file will not be transpiled directly to "colors.css"):
+
+// ex: _colors.scss
+
+// Now, if you import the partial file, omit the underscore. Sass understands that it should import the file "_colors.scss", si no tiene _ el import
+
+Example
+
+@import "colors"; //se llama _colors en realidad
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: $myBlue;
+}
+
+// Nota: si tenemos un archivo con nombre "hola", y lo transpilamos a css, tendra como nombre "hola.css", es el nombre predeterminado, lo podemos modificar si queremos.

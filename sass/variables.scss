@@ -1,0 +1,70 @@
+// With Sass, you can store information in variables, like:
+
+// - strings
+// - numbers
+// - colors
+// - booleans
+// - lists
+// - nulls
+
+// Sass uses the $ symbol, followed by a name, to declare variables:
+
+// Sass Variable Syntax:
+
+$variablename: value;
+
+
+// EXAMPLE:
+
+$myFont: Helvetica, sans-serif;
+$myColor: red;
+$myFontSize: 18px;
+$myWidth: 680px;
+
+body {
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+#container {
+  width: $myWidth;
+}
+
+// Cuando el archivo sea transpilado, se vera algo asi:
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: red;
+}
+
+#container {
+  width: 680px;
+}
+
+// DEFAULT BEHAVIOUR FOR VARIABLE SCOPES:
+
+$myColor: red;
+
+h1 {
+  $myColor: green;// ---> REDEFINIMOS LOCALMENTE A VERDE
+  color: $myColor;// ---> VERDE
+}
+
+p {
+  color: $myColor; //--->ROJO (USA VAR GLOBAL)
+}
+
+// !GLOBAL:
+
+$myColor: red;// ---> ROJO
+
+h1 {
+  $myColor: green //!global; ---> REDEFINE GLOBALMENTE LA VARIABLE MYCOLOR Y TODO LO QUE VENGA DESPUES, LOCAL O GLOBALMENTE.
+  color: $myColor// ---> VERDE
+}
+
+p {
+  color: $myColor; //---> VERDE
+}

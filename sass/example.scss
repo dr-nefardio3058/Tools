@@ -1,0 +1,19 @@
+/* define variables for the primary colors */
+$primary_1: #a2b9bc;
+$primary_2: #b2ad7f;
+$primary_3: #878f99;
+
+/* use the variables */
+.main-header {
+  background-color: $primary_1;
+}
+
+.menu-left {
+  background-color: $primary_2;
+}
+
+.menu-right {
+  background-color: $primary_3;
+}
+
+//LOS COMENTARIOS NO SE TRANSPASAN AL CSS NI AL MIN, Y ESTOS SE CREAN EN EL MISMO DIRECTORIO DEL QUE TRANSPILAMOS: SI TRANSPILAMOS @EXTEND EN LA CARPETA "HOLA", SE CREARAN MIN.CSS Y .CSS DE @EXTEND EN LA MISMA CARPETA.

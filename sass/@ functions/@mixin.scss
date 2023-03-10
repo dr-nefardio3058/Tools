@@ -1,0 +1,98 @@
+// The @mixin directive lets you create CSS code that is to be reused throughout the website.
+
+// The @include directive is created to let you use (include) the mixin.
+
+
+// The following example creates a mixin named "important-text":
+
+// SCSS Syntax:
+
+@mixin important_text {
+color: red;
+font-size: 25px;
+font-weight: bold;
+border: 1px solid blue;
+}
+
+// Tip: A tip on hyphens and underscore in Sass: Hyphens and underscores are considered to be the same. This means that @mixin important-text { } and @mixin important_text { } are considered as the same mixin!
+
+.danger {
+    @include important-text;
+    background-color: hsl(120, 100%, 40%);
+}
+
+//   Lo que hacemos aca es incluir el mixin "important_text" a esa "funcion [local]", por lo que danger tendra las propiedades de mixin (texto rojo, font-size 25px) y toda las que agregemos localmente en "danger", en este caso, background-color:verde.
+
+// A mixin can also include other mixins:
+
+// SCSS Syntax:
+
+@mixin special-text {
+@include important-text;
+@include link;
+@include special-border;
+}
+
+//Ahora, el mixing special-text incluye otras cosas extras.
+
+
+// Passing Variables to a Mixin
+// Mixins accept arguments. This way you can pass variables to a mixin.
+
+// Here is how to define a mixin with arguments:
+
+// SCSS Syntax:
+
+/* Define mixin with two arguments */
+@mixin bordered($color/*blue*/, $width) { //es posible tambien asignar valores default dentro del mixin (azul)
+border: $width solid $color;
+}
+
+.myArticle {
+  @include bordered(blue, 1px);  // Call mixin with two values
+}
+
+.myNotes {
+  @include bordered(red, 2px); // Call mixin with two values
+}
+
+// CSS Transpill:
+
+.myArticle {
+border: 1px solid blue;
+}
+
+.myNotes {
+border: 2px solid red;
+}
+
+// En el ejemplo de abajo incluimos bordered, pero cambiamos el parametro de color a amarillo(localemente)
+
+.myTips {
+    @include bordered($color: orange);
+}
+
+// Using a Mixin For Vendor Prefixes
+// Another good use of a mixin is for vendor prefixes.
+
+// SCSS Syntax:
+
+@mixin transform($property) {
+-webkit-transform: $property;
+-ms-transform: $property;
+transform: $property; //estos valores no estan definidos y los definiremos cuando targeteamos otra funcion, como la de abajo.
+}
+
+.myBox {
+@include transform(rotate(20deg)); //solo le decimos que incluya transform (todos en este caso) y le indicamos el valor.
+}
+
+// After compilation, the CSS will look like this:
+
+// CSS Output:
+
+.myBox {
+-webkit-transform: rotate(20deg);
+-ms-transform: rotate(20deg);
+transform: rotate(20deg);
+}
