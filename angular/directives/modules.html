@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> <!--siempre en head-->
+<body>
+
+<p>Try to change the names.</p>
+
+<div ng-app="myApp" ng-controller="myCtrl"> <!--The "myApp" parameter refers to an HTML element in which the application will run. Now you can add controllers, directives, filters, and more, to your AngularJS application.-->
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);  // creamos una funcion/app llamada app, que haga target al ng-app y al array (2 miembros)
+/*19 a 21 es el control.js */app.controller('myCtrl', function($scope) { //mediante el controller, controlamos la app y targeteamos a la app por el nombre de este: "myCtrl" y la funcion sea scope para redefinir las variables
+    $scope.firstName= "John"; //scopeamos primer nombre para darle el value John
+    $scope.lastName= "Doe"; // "" Doe.
+}); //cerramos funcion
+</script> <!--podemos poner lo que queramos en <script>: js, java, lo que sea. (cambian los comentarios a //)-->
+
+<div ng-app="myApp1" w3-test-directive></div>
+
+<script>
+var app = angular.module("myApp1", []); // esto seria myApp
+app.directive("w3TestDirective", function() { //en vez de un controller es una directive y ponemos app.directive y creamos funcion, ya que estamos entrando en esta al llegar a "Myapp"
+    return {
+        template : "I was made in a directive constructor!" //arroja este resultado en pantalla
+    };
+});
+</script>
+
+<div ng-app="myApp2" ng-controller="myCtrl2">
+    {{ firstName + " " + lastName }}
+    </div>
+    
+    <script src="myApp2.js"></script>
+    <script src="myCtrl22.js"></script>
+    
+    </body>
+    </html>
+
+</body>
+</html>
+
+
+</body>
+</html>
+
+<!--18. A module is created by using the AngularJS function angular.module. The module is a container for the application controllers. Controllers always belong to a module.
+Angular keeps all functions to the local module, for avoiding errors.
+

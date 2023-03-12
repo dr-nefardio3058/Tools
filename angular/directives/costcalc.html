@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div data-ng-app="" data-ng-init="quantity=1;price=5"> <!--1 y 5 son los values.-->
+
+<h2>Cost Calculator (*)</h2>
+
+Quantity: <input type="number" ng-model="quantity"> <!--input es el cuadrito y bindeamos quantity a los otros quantity-->
+Price: <input type="number" ng-model="price"> <!--lo mismo pero con price, y tipo num asi solo pone numeros y no letras-->
+
+<p><b>Total:</b> {{quantity * price}}</p> <!--b:bold--> <!--abajo va la multiplicacion segun los valores de price y quantity-->
+
+</div>
+
+</body>
+</html>

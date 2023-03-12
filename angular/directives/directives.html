@@ -1,0 +1,29 @@
+<!-- AngularJS lets you extend HTML with new attributes called Directives (ng-).
+
+AngularJS has a set of built-in directives which offers functionality to your applications.
+
+AngularJS also lets you define your own directives. -->
+
+<!-- The ng-app directive initializes an AngularJS application. The ng-app directive also tells AngularJS that the <div> element is the "owner" of the AngularJS application.
+
+The ng-init directive initializes application data. init y model van siempre a la par.
+
+The ng-model directive binds the value of HTML controls (input, select, textarea) to application data. -->
+
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="" ng-init="firstName='John'">  <!--damos valor a la variable "firstname"-->
+
+<p>Input something in the input box:</p>
+<p>Name: <input type="text" ng-model="firstName"></p> <!--fetcheamos variable y le asignamos valor.-->
+<p>You wrote: {{ firstName }}</p> <!--agarra firstname de la linea 21, y su valor de la 20. la caja input de arriba va a cambiar segun lo que le pongamos en firstName, y por consiguiente este <p>, que imprimira lo que nosotros hayamos puesto.-->
+
+</div>
+
+</body>
+</html>
+
+<!-- {{ firstName }} is bound with ng-model="firstName". -->

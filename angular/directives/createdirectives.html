@@ -1,0 +1,41 @@
+<!-- Create New Directives
+
+In addition to all the built-in AngularJS directives, you can create your own directives.
+
+New directives are created by using the .directive function.
+
+To invoke the new directive, make an HTML element with the same tag name as the new directive.
+
+When naming a directive, you must use a camel case name, w3TestDirective, but when invoking it, you must use - separated name, w3-test-directive -->
+
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp"> <!--aca recien definimos nuestra app si hacemos nuestras propias directivas-->
+
+<maximito></maximito> <!--es lo mismo que un div con el atributo "Maximito", todos los ejemplos abajos sirven para hacer esto igual, pero con distinta syntaxis:-->
+
+<!-- generan el mismo resultado que el de la linea 16:
+
+<div w3-test-directive></div>
+<div class="w3-test-directive"></div>
+directive: w3-test-directive -->
+
+<script>
+var app = angular.module("myApp", []);
+app.directive("maximito", function() {
+    return {
+        template : "<h1>Made by a directive!</h1>" // el h1 si se expresa, aunque no se note
+    };
+});
+</script>
+
+</body>
+</html>
+
+<!-- You can invoke a directive by using:
+
+- Element name
+- Attribute
+- Class
+- Comment -->

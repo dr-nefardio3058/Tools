@@ -1,0 +1,47 @@
+<!-- AngularJS extends HTML with new attributes.
+
+AngularJS is perfect for Single Page Applications (SPAs). -->
+
+<!-- Introduction example: -->
+
+<!DOCTYPE html>
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> <!--SIEMPRE EN HEAD ANIDADO DE UN <SCRIPT> YA QUE SI LO PONEMOS DESPUES NO CARGA LA LIBRERIA Y NO ANDA ANGULAR. tenemos que poner esto si o si como cualquier framework para que funcione angular-->
+
+<body>
+
+<div ng-app=""> <!--linea 31. vital para que funcione el framework angular, al igual que el <script>-->
+<p>Input something in the input box:</p>
+<p>Name: <input type="text" ng-model="name" placeholder="Enter name here"></p> <!--EL TEXTO DE AL LADO DEL INPUT. explicacion en linea 33-->
+<p ng-bind="name"></p> <!--ESCRIBE EL NOMBRE DEL INPUT ABAJO. explicacion en linea 35-->
+<h1>Hello</h1>
+
+</div>
+
+<div data-ng-app="" data-ng-init="firstName='John'">
+
+<p>The name is <span data-ng-bind="firstName"></span></p> <!--te name is john (asignamos la variable a firstName y la hacemos que se muestre con binf)-->
+
+</div>
+
+</body>
+</html>
+
+<!-- NG-BIND: MOSTRAR X VARIABLE -->
+
+<!-- You can use data-ng-, instead of ng-, if you want to make your page HTML valid. -->
+
+<!-- AngularJS directives are HTML attributes with an ng prefix. -->
+
+<!-- AngularJS is a JavaScript framework. It can be added to an HTML page with a <script> tag.
+
+AngularJS extends HTML attributes with Directives, and binds data to HTML with Expressions. -->
+
+<!-- AngularJS extends HTML with ng-directives: (se puede poner ng-* o data-ng-*)
+
+linea 14. The ng-app directive defines an AngularJS application. The ng-app directive tells AngularJS that the <div> element is the "owner" of an AngularJS application.
+
+"" 16. The ng-model directive binds the value of HTML controls (input, select, textarea) to application data. The ng-model directive binds the value of the input field to the application variable name.
+
+"" 17. The ng-bind directive binds application data to the HTML view. The ng-bind directive binds the content of the <p> element to the application variable name. --> 
